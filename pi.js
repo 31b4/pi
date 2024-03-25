@@ -32,6 +32,6 @@ if (isCloseToLastItem()) {
 }
 
 
-for (let index = 0; index < 200; index++) {
+for (let index = 0; index < 500; index++) {
     updatePiDisplay()
 }
