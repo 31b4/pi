@@ -6,8 +6,25 @@
     <title>π</title>
 </head>
 <body>
+    <style>
+    body {
+    height: calc(100vh + 1px); /* Set body width 1px larger than viewport width */
+}
+
+#content {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: pre-wrap;
+    word-wrap: break-word; /* Ensure word wrapping */
+    overflow-wrap: break-word; /* Ensure word wrapping for browsers that support it */
+}
+    </style>
     <h1 style="text-align: center;">All digits of π</h1>
-    3.141592
+    <div id="content">
+        <!-- Digits of pi will be dynamically loaded here -->
+    </div>
+    <div id="last-item"></div>
+        <script src="pi.js"></script>
 
 </body>
 </html>
