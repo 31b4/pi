@@ -4,11 +4,9 @@ function calculatePiDigits(startIndex, count) {
 
 // Function to fetch more digits of pi
 function updatePiDisplay() {
-    console.log("Updating Pi Display");
+    const newDigits = calculatePiDigits(100); // Adjust this value as needed
     const piContainer = document.getElementById('content');
-    const currentDigits = piContainer.textContent; // Initialize with '3.' if no digits are displayed yet
-    const newDigits = calculatePiDigits();
-    piContainer.textContent = currentDigits + newDigits;
+    piContainer.textContent += newDigits;
 }
 
 // Function to check if user is close to the last item
@@ -24,10 +22,16 @@ window.addEventListener('scroll', function() {
     if (isCloseToLastItem()) {
         for (let index = 0; index < 200; index++) {
             updatePiDisplay()
-        }      }
+        }
+    }
 });
 
 // Initial check for updating pi digits
 if (isCloseToLastItem()) {
     updatePiDisplay();
+}
+
+
+for (let index = 0; index < 200; index++) {
+    updatePiDisplay()
 }
